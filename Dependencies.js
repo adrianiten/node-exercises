@@ -4,7 +4,7 @@ http.createServer(function (request, response) {
 response.writeHead(200,
   {'content-type': 'text/plain; charset=utf-8'});
 var urlString = url.parse(request.url, true);
-var body = 'Hello' + urlString.query.brot;
+var body = 'Hello ' + urlString.query.brot;
 response.end(body);
 }).listen(8080, '127.0.0.1');
 console.log('Server läuft abhängend von brot.');
